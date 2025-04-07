@@ -12,7 +12,12 @@ container.setAttribute("style", `width: ${pixMax}px`);
 for (i; i < x * y; i++) {
   gridDiv = document.createElement("div");
   container.appendChild(gridDiv);
-  gridDiv.innerText = "hi";
+  //   gridDiv.innerText = "hi";
   gridDiv.classList = "grid grid-border";
-  gridDiv.setAttribute("style", `width: ${pixMax / x}px`);
+  gridDiv.setAttribute(
+    "style",
+    `min-width: ${pixMax / x}px;
+    min-height: 30px`
+  );
+  //   gridDiv.setAttribute("style", "background-color: black; color: pink");
 }
