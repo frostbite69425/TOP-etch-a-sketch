@@ -60,7 +60,7 @@ function colourGrid() {
     box.addEventListener("mouseover", () => {
       box.style.backgroundColor = `rgb(${randomNumGenerator()}, ${randomNumGenerator()}, ${randomNumGenerator()})`;
       boxStyles = window.getComputedStyle(box);
-      opacityValue = boxStyles.getPropertyValue("opacity");
+      opacityValue = Number(boxStyles.getPropertyValue("opacity"));
       log(opacityValue);
       if (opacityValue <= 1) {
         box.style.opacity = Number(opacityValue + 0.1);
