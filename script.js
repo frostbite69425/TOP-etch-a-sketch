@@ -1,3 +1,9 @@
+// function to debug
+
+function log(x) {
+  console.log(x);
+}
+
 // selectors
 
 const container = document.querySelector("div.container");
@@ -9,7 +15,7 @@ const userAlert = document.querySelector(".wrongInputInfo");
 // FUNCTION FOR DYNAMICALLY CREATING THE GRID
 
 x = 10;
-pixMaxWidth = 60;
+pixMaxWidth = 40;
 
 function generateGrid() {
   container.setAttribute("style", `width: ${pixMaxWidth}vw`);
@@ -22,7 +28,7 @@ function generateGrid() {
       `min-width: ${pixMaxWidth / x}vw;
     min-height:${pixMaxWidth / x}vw`
     );
-    // gridDiv.innerText = i;
+    gridDiv.style.opacity = 0;
   }
 }
 generateGrid();
@@ -39,7 +45,34 @@ inputForm.addEventListener("submit", (e) => {
     generateGrid();
     inputForm.reset();
     input.focus();
+    colourGrid();
   } else {
     userAlert.textContent = "Please select a number greater than 0";
   }
 });
+
+// FUNCTION THAT CHANGES THE COLOUR OF THE GRID ON MOUSEHOVER
+
+function colourGrid() {
+  gridBox = document.querySelectorAll("div.grid");
+
+  gridBox.forEach((box) => {
+    box.addEventListener("mouseover", () => {
+      box.style.backgroundColor = `rgb(${randomNumGenerator()}, ${randomNumGenerator()}, ${randomNumGenerator()})`;
+      boxStyles = window.getComputedStyle(box);
+      opacityValue = boxStyles.getPropertyValue("opacity");
+      log(opacityValue);
+      if (opacityValue <= 1) {
+        box.style.opacity = Number(opacityValue + 0.1);
+      }
+    });
+  });
+}
+
+colourGrid();
+
+// FUNCTION TO RANDOMISE COLOR
+
+function randomNumGenerator() {
+  return Math.floor(Math.random() * 255);
+}
