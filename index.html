@@ -5,14 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="redKatDevsBig.png" type="image/x-icon" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="head"></header>
-    <section class="main"></section>
+    <header class="head">
+      <h1 class="title">ETCH-A-SKETCH</h1>
+    </header>
+    <section class="main">
+      <p class="info">
+        Specify the desired dimensions of your sketchpad in the following
+        section:
+      </p>
+      <div class="user-input">
+        <form class="form" id="form" action="">
+          <div class="row-div">
+            <label for="rows" class="prompt-text"
+              >Specify the number of rows you want and click on the button below
+              to generate a new sketchpad!</label
+            >
+            <input
+              class="input-field"
+              type="number"
+              name="rows"
+              id="rows"
+              required
+              placeholder="10"
+            />
+          </div>
+          <div class="submit-btn-div">
+            <input type="button" value="Generate" class="submit-btn" />
+          </div>
+          <div class="wrongInputInfo"></div>
+        </form>
+      </div>
+    </section>
     <section class="sketchpad">
       <div class="container"></div>
     </section>
-    <footer class="foot"></footer>
+    <footer class="foot">made by frostbite69425</footer>
   </body>
 </html>
