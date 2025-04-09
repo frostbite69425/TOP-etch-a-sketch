@@ -33,7 +33,7 @@ generateGrid();
 inputForm.addEventListener("submit", (e) => {
   x = input.value;
   e.preventDefault();
-  if (x > 0) {
+  if (x > 0 && x <= 100) {
     userAlert.innerHTML = "";
     container.innerHTML = "";
     generateGrid();
@@ -41,7 +41,8 @@ inputForm.addEventListener("submit", (e) => {
     input.focus();
     colourGrid();
   } else {
-    userAlert.textContent = "Please select a number greater than 0";
+    userAlert.textContent =
+      "⚠️ Please select a number greater than 0 and less than 100!";
   }
 });
 

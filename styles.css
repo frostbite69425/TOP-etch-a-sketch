@@ -23,6 +23,7 @@
   font-family: "Bungee Spice", sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 4px 4px 2px black;
 }
 
 body {
@@ -69,6 +70,7 @@ footer {
 
 .container-boundary {
   border: 1px dashed #ecf39e;
+  background-color: black;
 }
 
 .sketchpad {
@@ -145,4 +147,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrongInputInfo {
+  color: black;
+  font-weight: 700;
 }
