@@ -1,9 +1,3 @@
-// function to debug
-
-function log(x) {
-  console.log(x);
-}
-
 // selectors
 
 const container = document.querySelector("div.container");
@@ -38,7 +32,6 @@ generateGrid();
 
 inputForm.addEventListener("submit", (e) => {
   x = input.value;
-  console.log(x);
   e.preventDefault();
   if (x > 0) {
     userAlert.innerHTML = "";
@@ -62,7 +55,6 @@ function colourGrid() {
       box.style.backgroundColor = `rgb(${randomNumGenerator()}, ${randomNumGenerator()}, ${randomNumGenerator()})`;
       boxStyles = window.getComputedStyle(box);
       opacityValue = Number(boxStyles.getPropertyValue("opacity"));
-      log(opacityValue);
       if (opacityValue <= 1) {
         box.style.opacity = Number(opacityValue + 0.1);
       }
