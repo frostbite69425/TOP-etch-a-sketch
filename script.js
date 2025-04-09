@@ -11,11 +11,12 @@ const inputForm = document.querySelector("form.form");
 const input = document.querySelector("input.input-field");
 const submitBtn = document.querySelector(".submit-btn");
 const userAlert = document.querySelector(".wrongInputInfo");
+const gitBtn = document.querySelector(".git-button");
 
 // FUNCTION FOR DYNAMICALLY CREATING THE GRID
 
-x = 10;
-pixMaxWidth = 40;
+x = 16;
+pixMaxWidth = 30;
 
 function generateGrid() {
   container.setAttribute("style", `width: ${pixMaxWidth}vw`);
@@ -71,8 +72,14 @@ function colourGrid() {
 
 colourGrid();
 
-// FUNCTION TO RANDOMISE COLOR
+// FUNCTION TO GENERATE RANDOM NUMBER
 
 function randomNumGenerator() {
   return Math.floor(Math.random() * 255);
 }
+
+// FUNCTION TO REDIRECT TO GITHUB PAGE
+
+gitBtn.addEventListener("click", () => {
+  location.href = "https://github.com/frostbite69425";
+});

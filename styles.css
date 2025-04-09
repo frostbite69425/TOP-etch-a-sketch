@@ -5,8 +5,32 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+.honk-fun {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+.underdog-regular {
+  font-family: "Underdog", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #4f772d;
+}
+
 .grid {
-  border: 1px solid black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   margin: 0;
 }
 
@@ -14,4 +38,111 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+header,
+section,
+footer {
+  padding: 1vw;
+}
+
+.title {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.info,
+.prompt-text {
+  color: #ecf39e;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1vw;
+}
+
+.form,
+.row-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.container-boundary {
+  border: 1px dashed #ecf39e;
+}
+
+.sketchpad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vw;
+  background-color: #132a13;
+  max-width: fit-content;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.input-field,
+.submit-btn {
+  font-size: 1.3rem;
+  background-color: #ecf39e;
+  border-radius: 15px;
+  padding: 0.7vw;
+}
+
+.submit-btn {
+  color: #132a13;
+  transition: 0.3s ease-in-out;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1);
+}
+
+.foot {
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2d2e32;
+  border: 2px solid #2d2e32;
+  transition: all 0.45s;
+}
+
+.button:hover {
+  transform: rotate(360deg);
+  transform-origin: center center;
+  background-color: #ffff;
+  color: #2d2e32;
+}
+
+.button:hover .btn-svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+    brightness(103%) contrast(103%);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
